@@ -13,9 +13,7 @@
       <!-- Info -->
       <div>
         <div class="flex items-center">
-          <div class="text-sm font-bold text-gray-600 lg:text-md">
-            {{ company }}
-          </div>
+          <div class="text-sm font-bold text-gray-600 lg:text-md">{{ company }}</div>
           <div class="flex text-xs font-bold">
             <div
               v-if="newStatus"
@@ -32,12 +30,12 @@
           </div>
         </div>
 
-        <div class="mt-2 font-bold text-gray-900 lg:text-lg">
+        <div class="mt-2 font-bold text-gray-900">
           {{ position }}
         </div>
 
         <div
-          class="flex text-xs mt-2 mb-4 text-gray-500 border-b border-gray-200 pb-4 lg:border-0 lg:mb-0 lg:text-sm"
+          class="flex text-xs mt-2 mb-4 text-gray-500 border-b border-gray-200 pb-4 lg:border-0 lg:mb-0"
         >
           <div class="mr-2">{{ postedAt }}</div>
           <div class="mr-2">·</div>
@@ -52,26 +50,26 @@
     <!-- Tags -->
     <div class="flex flex-wrap justify-start lg:justify-end lg:items-center">
       <div
-        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm cursor-pointer"
+        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm"
       >
         {{ role }}
       </div>
       <div
-        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm cursor-pointer"
+        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm"
       >
         {{ level }}
       </div>
       <div
         v-for="tag in languages"
         :key="tag.id"
-        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm cursor-pointer"
+        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm"
       >
         {{ tag }}
       </div>
       <div
         v-for="tool in tools"
         :key="tool.id"
-        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm cursor-pointer"
+        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm"
       >
         {{ tool }}
       </div>

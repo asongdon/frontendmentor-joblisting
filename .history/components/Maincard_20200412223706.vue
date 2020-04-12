@@ -52,26 +52,26 @@
     <!-- Tags -->
     <div class="flex flex-wrap justify-start lg:justify-end lg:items-center">
       <div
-        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm cursor-pointer"
+        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm lg:text-md"
       >
         {{ role }}
       </div>
       <div
-        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm cursor-pointer"
+        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm"
       >
         {{ level }}
       </div>
       <div
         v-for="tag in languages"
         :key="tag.id"
-        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm cursor-pointer"
+        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm"
       >
         {{ tag }}
       </div>
       <div
         v-for="tool in tools"
         :key="tool.id"
-        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm cursor-pointer"
+        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm"
       >
         {{ tool }}
       </div>

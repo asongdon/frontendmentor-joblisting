@@ -1,6 +1,6 @@
 <template>
-  <div class="mt-10">
-    <div class="container mx-auto px-6" v-for="item in data" :key="item.id">
+  <div class="mt-10 mx-auto">
+    <div class="container px-6" v-for="item in data" :key="item.id">
       <Maincard
         :logo="item.logo"
         :company="item.company"
