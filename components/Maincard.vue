@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col lg:flex-row lg:justify-between flex-no-wrap rounded-sm px-5 bg-white shadow-xl py-4 mb-10 border-l-4 border-white"
+    class="flex flex-col lg:flex-row lg:justify-between flex-no-wrap rounded-sm px-5 bg-white shadow-xl py-4 mb-10 border-l-4 border-white transition-all duration-300 ease-in-out hover:shadow-2xl"
     :class="{ 'border-l-4': featured, 'border-teal-500': featured }"
   >
     <div class="lg:flex lg:justify-between">
