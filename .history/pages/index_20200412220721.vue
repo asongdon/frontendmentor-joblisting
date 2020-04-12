@@ -13,7 +13,6 @@
         :languages="item.languages"
         :tools="item.tools"
         :level="item.level"
-        :role="item.role"
       />
     </div>
   </div>

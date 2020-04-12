@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen">
+  <div>
     <Header/>
     <nuxt />
   </div>
@@ -26,7 +26,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  @apply bg-gray-100;
 }
 
 *,

@@ -7,13 +7,6 @@
         :newStatus="item.new"
         :featured="item.featured"
         :position="item.position"
-        :postedAt="item.postedAt"
-        :contract="item.contract"
-        :location="item.location"
-        :languages="item.languages"
-        :tools="item.tools"
-        :level="item.level"
-        :role="item.role"
       />
     </div>
   </div>

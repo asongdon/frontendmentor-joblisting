@@ -1,20 +1,7 @@
 <template>
   <div class="mt-10">
     <div class="container px-6" v-for="item in data" :key="item.id">
-      <Maincard
-        :logo="item.logo"
-        :company="item.company"
-        :newStatus="item.new"
-        :featured="item.featured"
-        :position="item.position"
-        :postedAt="item.postedAt"
-        :contract="item.contract"
-        :location="item.location"
-        :languages="item.languages"
-        :tools="item.tools"
-        :level="item.level"
-        :role="item.role"
-      />
+      <Maincard :logo="item.logo" />
     </div>
   </div>
 </template>
