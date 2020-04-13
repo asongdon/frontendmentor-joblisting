@@ -32,7 +32,7 @@
           </div>
         </div>
 
-        <div class="mt-2 font-bold text-gray-900 lg:text-lg">
+        <div class="mt-2 font-bold text-gray-900 lg:text-lg lg:cursor-pointer hover:text-teal-500">
           {{ position }}
         </div>
 
@@ -52,26 +52,26 @@
     <!-- Tags -->
     <div class="flex flex-wrap justify-start lg:justify-end lg:items-center">
       <div
-        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm cursor-pointer"
+        class="px-2 py-1 bg-gray-200 text-gray-500 rounded font-bold mr-2 mb-4 text-sm cursor-pointer hover:text-white hover:bg-teal-500"
       >
         {{ role }}
       </div>
       <div
-        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm cursor-pointer"
+        class="px-2 py-1 bg-gray-200 text-gray-500 rounded font-bold mr-2 mb-4 text-sm cursor-pointer hover:text-white hover:bg-teal-500"
       >
         {{ level }}
       </div>
       <div
         v-for="tag in languages"
         :key="tag.id"
-        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm cursor-pointer"
+        class="px-2 py-1 bg-gray-200 text-gray-500 rounded font-bold mr-2 mb-4 text-sm cursor-pointer hover:text-white hover:bg-teal-500"
       >
         {{ tag }}
       </div>
       <div
         v-for="tool in tools"
         :key="tool.id"
-        class="px-2 py-1 bg-gray-200 text-gray-500 rounded-sm font-bold mr-2 mb-4 text-sm cursor-pointer"
+        class="px-2 py-1 bg-gray-200 text-gray-500 rounded font-bold mr-2 mb-4 text-sm cursor-pointer hover:text-white hover:bg-teal-500"
       >
         {{ tool }}
       </div>
