@@ -1,31 +1,41 @@
 <template>
   <div class="mt-10">
-    <div class="container mx-auto px-6" v-for="item in data" :key="item.id">
-      <Maincard
-        :logo="item.logo"
-        :company="item.company"
-        :newStatus="item.new"
-        :featured="item.featured"
-        :position="item.position"
-        :postedAt="item.postedAt"
-        :contract="item.contract"
-        :location="item.location"
-        :languages="item.languages"
-        :tools="item.tools"
-        :level="item.level"
-        :role="item.role"
-      />
+    <div class="container mx-auto px-6">
+      <!-- Filter bar -->
+      <FilterBar/>
+      <!-- End filter bar -->
+      
+      <!-- Main card listing -->
+      <div v-for="item in data" :key="item.id">
+        <Maincard
+          :logo="item.logo"
+          :company="item.company"
+          :newStatus="item.new"
+          :featured="item.featured"
+          :position="item.position"
+          :postedAt="item.postedAt"
+          :contract="item.contract"
+          :location="item.location"
+          :languages="item.languages"
+          :tools="item.tools"
+          :level="item.level"
+          :role="item.role"
+        />
+      </div>
+      <!-- End maincard -->
     </div>
   </div>
 </template>
 
 <script>
 import Maincard from '@/components/Maincard'
+import FilterBar from '@/components/FilterBar'
 import data from '@/static/data/data.json'
 
 export default {
   components: {
-    Maincard
+    FilterBar,
+    Maincard,
   },
   data() {
     return {

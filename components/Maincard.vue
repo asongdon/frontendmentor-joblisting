@@ -13,10 +13,10 @@
       <!-- Info -->
       <div>
         <div class="flex items-center">
-          <div class="text-sm font-bold text-gray-600 lg:text-md">
+          <div class="text-sm font-medium text-gray-600 lg:text-md">
             {{ company }}
           </div>
-          <div class="flex text-xs font-bold">
+          <div class="flex text-xs font-medium">
             <div
               v-if="newStatus"
               class=" bg-teal-500 text-white rounded-full px-2 py-1 uppercase ml-2"
@@ -32,7 +32,9 @@
           </div>
         </div>
 
-        <div class="mt-2 font-bold text-gray-900 lg:text-lg lg:cursor-pointer hover:text-teal-500">
+        <div
+          class="mt-2 font-bold text-gray-900 lg:text-lg lg:cursor-pointer hover:text-teal-500"
+        >
           {{ position }}
         </div>
 
@@ -52,26 +54,26 @@
     <!-- Tags -->
     <div class="flex flex-wrap justify-start lg:justify-end lg:items-center">
       <div
-        class="px-2 py-1 bg-gray-200 text-gray-500 rounded font-bold mr-2 mb-4 text-sm cursor-pointer hover:text-white hover:bg-teal-500"
+        class="px-2 py-1 bg-gray-200 text-gray-500 rounded font-medium mr-2 mb-4 text-sm cursor-pointer hover:text-white hover:bg-teal-500"
       >
         {{ role }}
       </div>
       <div
-        class="px-2 py-1 bg-gray-200 text-gray-500 rounded font-bold mr-2 mb-4 text-sm cursor-pointer hover:text-white hover:bg-teal-500"
+        class="px-2 py-1 bg-gray-200 text-gray-500 rounded font-medium mr-2 mb-4 text-sm cursor-pointer hover:text-white hover:bg-teal-500"
       >
         {{ level }}
       </div>
       <div
         v-for="tag in languages"
         :key="tag.id"
-        class="px-2 py-1 bg-gray-200 text-gray-500 rounded font-bold mr-2 mb-4 text-sm cursor-pointer hover:text-white hover:bg-teal-500"
+        class="px-2 py-1 bg-gray-200 text-gray-500 rounded font-medium mr-2 mb-4 text-sm cursor-pointer hover:text-white hover:bg-teal-500"
       >
         {{ tag }}
       </div>
       <div
         v-for="tool in tools"
         :key="tool.id"
-        class="px-2 py-1 bg-gray-200 text-gray-500 rounded font-bold mr-2 mb-4 text-sm cursor-pointer hover:text-white hover:bg-teal-500"
+        class="px-2 py-1 bg-gray-200 text-gray-500 rounded font-medium mr-2 mb-4 text-sm cursor-pointer hover:text-white hover:bg-teal-500"
       >
         {{ tool }}
       </div>
