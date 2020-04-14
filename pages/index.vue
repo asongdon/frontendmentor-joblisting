@@ -2,9 +2,9 @@
   <div class="mt-10">
     <div class="container mx-auto px-6">
       <!-- Filter bar -->
-      <FilterBar/>
+      <FilterBar />
       <!-- End filter bar -->
-      
+
       <!-- Main card listing -->
       <div v-for="item in data" :key="item.id">
         <Maincard
@@ -30,16 +30,23 @@
 <script>
 import Maincard from '@/components/Maincard'
 import FilterBar from '@/components/FilterBar'
-import data from '@/static/data/data.json'
+// import data from '@/static/data/data.json'
 
 export default {
   components: {
     FilterBar,
-    Maincard,
+    Maincard
   },
   data() {
-    return {
-      data
+    return {}
+  },
+  computed: {
+    data() {
+      if (this.$store.state.filter.filteredList.length === 0) {
+        return this.$store.state.filter.fullFilteredList
+      } else {
+        return this.$store.state.filter.filteredList
+      }
     }
   }
 }

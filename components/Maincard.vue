@@ -54,11 +54,19 @@
     <!-- Tags -->
     <div class="flex flex-wrap justify-start lg:justify-end lg:items-center">
       <div
+        @click="
+          handleFilter(role)
+          filteringByTags(role)
+        "
         class="px-2 py-1 bg-gray-200 text-gray-500 rounded font-medium mr-2 mb-4 text-sm cursor-pointer hover:text-white hover:bg-teal-500"
       >
         {{ role }}
       </div>
       <div
+        @click="
+          handleFilter(level)
+          filteringByTags(level)
+        "
         class="px-2 py-1 bg-gray-200 text-gray-500 rounded font-medium mr-2 mb-4 text-sm cursor-pointer hover:text-white hover:bg-teal-500"
       >
         {{ level }}
@@ -66,6 +74,10 @@
       <div
         v-for="tag in languages"
         :key="tag.id"
+        @click="
+          handleFilter(tag)
+          filteringByTags(tag)
+        "
         class="px-2 py-1 bg-gray-200 text-gray-500 rounded font-medium mr-2 mb-4 text-sm cursor-pointer hover:text-white hover:bg-teal-500"
       >
         {{ tag }}
@@ -73,6 +85,10 @@
       <div
         v-for="tool in tools"
         :key="tool.id"
+        @click="
+          handleFilter(tool)
+          filteringByTags(tool)
+        "
         class="px-2 py-1 bg-gray-200 text-gray-500 rounded font-medium mr-2 mb-4 text-sm cursor-pointer hover:text-white hover:bg-teal-500"
       >
         {{ tool }}
@@ -97,6 +113,30 @@ export default {
     tools: Array,
     level: String,
     role: String
+  },
+  methods: {
+    handleFilter(filter) {
+      this.$store.dispatch('filter/filterTag', filter)
+    },
+    filteringByTags(tag) {
+      const fullFilteredList = this.$store.state.filter.fullFilteredList
+      const filteredList = this.$store.state.filter.filteredList
+      const filters = this.$store.state.filter.filters
+
+      for (let index = 0; index < filters.length; index++) {
+        const element = filters[index]
+        const filteredElement = fullFilteredList.filter(list => {
+          return (
+            list.role == tag ||
+            list.level == tag ||
+            list.languages.includes(tag) ||
+            list.tools.includes(tag)
+          )
+        })
+
+        this.$store.dispatch('filter/filterByTags', filteredElement)
+      }
+    }
   }
 }
 </script>
