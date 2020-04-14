@@ -27,9 +27,6 @@ export const mutations = {
   },
   filterByTags(state, list) {
     state.filteredList = list
-  },
-  addList(state, list) {
-    state.filteredList.push(list)
   }
 }
 
@@ -45,9 +42,6 @@ export const actions = {
   },
   async filterByTags({ commit }, list) {
     await commit('filterByTags', list)
-  },
-  async addList({ commit }, list) {
-    await commit('addList', list)
   },
   async unSetFilteredList({ commit }) {
     await commit('unSetFilteredList')
