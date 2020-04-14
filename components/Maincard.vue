@@ -6,7 +6,7 @@
     <div class="lg:flex lg:justify-between">
       <!-- Logo -->
       <div class="-mt-10 mb-2 lg:mt-0 lg:mb-0 lg:mr-5">
-        <img class="w-12 lg:w-24" :src="'logos/' + logo" alt="" />
+        <img class="w-12 lg:w-24" :src="$router.options.base + 'logos/' + logo" alt="" />
       </div>
       <!-- End Logo -->
 
